@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Jobs from "./components/jobs";
 import "./App.css";
 
 function App() {
@@ -13,18 +14,18 @@ function App() {
   
   useEffect(() => {
     axios.get("http://refertest.pythonanywhere.com/user/data").then(res => {
-      let jobData = res.data.data
+      let studentDetails = res.data.data
       setData({
-        name: jobData.name,
-        college: jobData.college,
-        profile_pic: jobData.pictureUrl
+        name: studentDetails.name,
+        college: studentDetails.college,
+        profile_pic: studentDetails.pictureUrl
       })
-      console.log(res)
     })
     .catch(err => console.log(err));
   }, []);
   return <div className="App">
     <h1>{data.college}</h1>
+    <Jobs />
   </div>;
 }
 
