@@ -19,7 +19,20 @@ const Jobs = () => {
             {/* <h1>{data}</h1> */}
             {data.jobs.map( (item, key) => {
                 return(
-                    <p key={key}>{item.company}</p>
+                    <div key={key} className="jobOption">
+                        <h2 className='cName'>{item.company}</h2>
+                        <h3 className="designation">{item.designation}</h3>
+                        <p>Location: {item.location}</p>
+                        <p>Experience: {item.min_experience === 0 ? 'Fresher' : item.min_experience}</p>
+                        <p>Skill required {item.skills.map((skill, key) => {
+                            return(
+                                <ul key={key}>
+                                    <li>{skill}</li>
+                                </ul>
+                            )
+                        })}</p>
+
+                    </div>
                 )
             })}
         </div>
