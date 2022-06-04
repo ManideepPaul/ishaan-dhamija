@@ -30,10 +30,21 @@ img {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  text-align: center;
 }
 
 .jobOption {
   padding: 10px 10px 10px 30px;
   background-color: #0093B8;
   border-radius: 15px;
+  line-height: 30px;
+  text-align: left;
+}
+
+li {
+  margin-left: 20px;
+}
+
+.title {
+  padding-bottom: 20px;
 }

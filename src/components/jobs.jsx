@@ -16,15 +16,15 @@ const Jobs = () => {
     }, [])
     return (
         <div className="jobContainer">
-            {/* <h1>{data}</h1> */}
+            <h1 className='title'>Jobs matching your preferences</h1>
             {data.jobs.map( (item, key) => {
                 return(
                     <div key={key} className="jobOption">
                         <h2 className='cName'>{item.company}</h2>
                         <h3 className="designation">{item.designation}</h3>
-                        <p>Location: {item.location}</p>
-                        <p>Experience: {item.min_experience === 0 ? 'Fresher' : item.min_experience}</p>
-                        <p>Skill required {item.skills.map((skill, key) => {
+                        <p><b>Location: </b>  {item.location}</p>
+                        <p><b>Experience: </b>  {item.min_experience === 0 ? 'Fresher' : item.min_experience}</p>
+                        <p><b>Skill required</b>  {item.skills.map((skill, key) => {
                             return(
                                 <ul key={key}>
                                     <li>{skill}</li>
