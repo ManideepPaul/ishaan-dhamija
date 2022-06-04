@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://refertest.pythonanywhere.com/user/data")
+      .get("https://refertest.pythonanywhere.com/user/data")
       .then((res) => {
         let studentDetails = res.data.data;
         setData({

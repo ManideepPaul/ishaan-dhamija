@@ -7,7 +7,7 @@ const Jobs = () => {
     })
 
     useEffect(() => {
-        axios.get('http://refertest.pythonanywhere.com/job/openings')
+        axios.get('https://refertest.pythonanywhere.com/job/openings')
         .then( res => {
             let jobData = res.data.data
             setData({jobs: jobData})
